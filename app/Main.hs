@@ -26,7 +26,6 @@ getIrisFeatures irises = tr $ fromLists [sepalLengths, sepalWidths, petalLengths
 
 getIris :: [Iris] -> (Matrix R, Vector R)
 getIris irises = (getIrisFeatures irises, getIrisLabels irises)
-    
 
 main = do
 
