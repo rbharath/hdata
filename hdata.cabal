@@ -48,6 +48,26 @@ executable             feedforward
                      , semigroups
                      , MonadRandom
 
+executable             classification
+    ghc-options:       -Wall -threaded -O2
+    hs-source-dirs:    app
+    main-is:           classification.hs
+    build-depends:     base
+                     , grenade
+                     , attoparsec
+                     , datasets
+                     , bytestring
+                     , cereal
+                     , either
+                     , optparse-applicative            == 0.13.*
+                     , text                            == 1.2.*
+                     , mtl                             >= 2.2.1      && < 2.3
+                     , hmatrix
+                     , transformers
+                     , singletons
+                     , semigroups
+                     , MonadRandom
+
 test-suite hdata-test
   type:                exitcode-stdio-1.0
   hs-source-dirs:      test
